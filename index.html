@@ -64,7 +64,7 @@
     <article id="post-android广播使用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/21/android广播使用/" class="article-date">
-  <time datetime="2015-11-21T03:38:07.000Z" itemprop="datePublished">2015-11-21</time>
+  <time datetime="2015-11-21T03:41:26.000Z" itemprop="datePublished">2015-11-21</time>
 </a>
     
   </div>
@@ -73,7 +73,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: android广播的使用<br>.BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。<br>在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存进度，等等。<br>Android中的广播机制设计的非常出色，很多事情原本需要开发者亲自操作的，现在只需等待广播告知自己就可以了，大大减少了开发的工作量和开发周期。而作为应用开发者，就需要数练掌握Android系统提供的一个开发利器，那就是BroadcastReceiver。下面我们就对BroadcastReceiver逐一地分析和演练，了解和掌握它的各种功能和用法。</p>
+        <p>#title: android广播的使用<br>.BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。<br>在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存进度，等等。<br>Android中的广播机制设计的非常出色，很多事情原本需要开发者亲自操作的，现在只需等待广播告知自己就可以了，大大减少了开发的工作量和开发周期。而作为应用开发者，就需要数练掌握Android系统提供的一个开发利器，那就是BroadcastReceiver。下面我们就对BroadcastReceiver逐一地分析和演练，了解和掌握它的各种功能和用法。</p>
 <p>.首先，我们来演示一下创建一个BroadcastReceiver，并让这个BroadcastReceiver能够根据我们的需要来运行。要创建自己的BroadcastReceiver对象，我们需要继承android.content.BroadcastReceiver，并实现其onReceive方法。下面我们就创建一个名为MyReceiver广播接收者：<br>package com.scott.receiver;  </p>
 <p>import android.content.BroadcastReceiver;<br>import android.content.Context;<br>import android.content.Intent;<br>import android.util.Log;  </p>
 <p>public class MyReceiver extends BroadcastReceiver {  </p>
@@ -246,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/21/android广播使用/" data-id="cih8jpph4000353nu2un12w4w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/21/android广播使用/" data-id="cih8ju2x000035vnu725k23yw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -276,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/21/wode-boke/" data-id="cih8jppgi000053nunwop1a8f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/21/wode-boke/" data-id="cih8ju2wi00005vnurousao8f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -305,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/21/my-new-post/" data-id="cih8jppgu000153nu4mtxvz04" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/21/my-new-post/" data-id="cih8ju2ws00015vnuftw4dg1w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -350,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/21/hello-world/" data-id="cih8jppgz000253nulylbtw9g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/21/hello-world/" data-id="cih8ju2wv00025vnu4ub2z3gj" class="article-share-link">Share</a>
       
       
     </footer>
