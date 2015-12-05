@@ -51,19 +51,19 @@
 
 
 
-<meta name="description" content="title:intent传递数据量问题##传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
-在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte">
+<meta name="description" content="title:intent传递数据量问题tags:- android##传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
+在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jianghao's blog">
 <meta property="og:url" content="http://yoursite.com/2015/12/05/intent传递数据量问题/index.html">
 <meta property="og:site_name" content="jianghao's blog">
-<meta property="og:description" content="title:intent传递数据量问题##传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
-在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte">
-<meta property="og:updated_time" content="2015-12-05T02:13:27.000Z">
+<meta property="og:description" content="title:intent传递数据量问题tags:- android##传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
+在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有">
+<meta property="og:updated_time" content="2015-12-05T02:16:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jianghao's blog">
-<meta name="twitter:description" content="title:intent传递数据量问题##传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
-在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte">
+<meta name="twitter:description" content="title:intent传递数据量问题tags:- android##传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
+在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有">
 
 
 
@@ -214,7 +214,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-05T10:13:27+08:00" content="2015-12-05">
+            <time itemprop="dateCreated" datetime="2015-12-05T10:16:14+08:00" content="2015-12-05">
               2015-12-05
             </time>
           </span>
@@ -251,7 +251,7 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="title:intent传递数据量问题">title:intent传递数据量问题</h2><p>##传输超过1M的数据量会crash<br>在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：</p>
+        <span itemprop="articleBody"><h2 id="title:intent传递数据量问题">title:intent传递数据量问题</h2><h2 id="tags:-_android">tags:- android</h2><p>##传输超过1M的数据量会crash<br>在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：</p>
 <p>在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte数组、每一个词组的拼音、词语、语音信息），经过分析发现是由于bundle不能传递大容量的数据信息，在stackoverflow里面查阅发现有同行遇到类似的问题：</p>
 <p>（1）“The size limit of Intent is still pretty low in Jelly Bean, which is somewhat lower than 1MB (around 90K), so you should always be cautious about your data length, even if your application targets only latest Android versions.”</p>
 <p>（2）“As per my experience (sometime ago), you are able to put up to 1MB of data in a Bundleencapsulated inside Intent. I think, this restriction was valid up till Froyo or GingerBread.”</p>
@@ -394,7 +394,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title:intent传递数据量问题"><span class="nav-number">1.</span> <span class="nav-text">title:intent传递数据量问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title:intent传递数据量问题"><span class="nav-number">1.</span> <span class="nav-text">title:intent传递数据量问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tags:-_android"><span class="nav-number">2.</span> <span class="nav-text">tags:- android</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
