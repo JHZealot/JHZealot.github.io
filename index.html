@@ -210,6 +210,103 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/05/intent传递数据量问题/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-05T10:13:27+08:00" content="2015-12-05">
+              2015-12-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/05/intent传递数据量问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/05/intent传递数据量问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="title:intent传递数据量问题">title:intent传递数据量问题</h2><p>##传输超过1M的数据量会crash<br>在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：</p>
+<p>在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte数组、每一个词组的拼音、词语、语音信息），经过分析发现是由于bundle不能传递大容量的数据信息，在stackoverflow里面查阅发现有同行遇到类似的问题：</p>
+<p>（1）“The size limit of Intent is still pretty low in Jelly Bean, which is somewhat lower than 1MB (around 90K), so you should always be cautious about your data length, even if your application targets only latest Android versions.”</p>
+<p>（2）“As per my experience (sometime ago), you are able to put up to 1MB of data in a Bundleencapsulated inside Intent. I think, this restriction was valid up till Froyo or GingerBread.”</p>
+<p>所以在通过bundle传递数据时只能传递较小的数据信息，对于在不同组件之间需要传递大容量数据的情况时，有几种替代方式可以解决不能用bundle传递这些数据的问题：</p>
+<p>##方法一：<br>将需要传递的数据写在临时文件或者数据库中，再跳转到另外一个组件的时候再去读取这些数据信息，这种处理方式会由于读写文件较为耗时导致程序运行效率较低；</p>
+<p>##方法二：<br>将需要传递的数据信息封装在一个静态的类中（注意当前组件和要跳转到的组件必须属于同一个进程，因为进程之间才能够共享数据），在当前组件中为类设置内容，然后再跳转到的组件中去取，这种处理方式效率很高，但是会破坏程序的独立性。</p>
+<p>具体采用哪种替代方式取决于具体的情况，建议采取第二种处理方式，因为这样会大大提高程序的运行效率，至于程序的独立性，看你怎么去封装这个类了。</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/11/22/test/" itemprop="url">
                   test
                 </a>
@@ -707,7 +804,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
