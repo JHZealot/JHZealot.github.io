@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -51,16 +51,25 @@
 
 
 
-<meta name="description" content="BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存">
+<meta name="description" content="##链表和数组的区别1）数组在内存中是逐个存放的，也就是说倘若数组的第一个元素在地址A,则数组第二个元素就在地址A+1。
+而链表则不是，链表每个节点没有相对固定的位置关系。某个节点在地址A其后的节点不一定是A+1,而在内存的其他空闲区域，呈现一种随机的状态。
+2）数组一旦显式的被申明后，其大小就固定了，不能动态进行扩充。而链表则可以，可以动态生成节点并且添加到已有的链表后面。
+3）链表灵活，但是空">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android广播的使用">
-<meta property="og:url" content="http://yoursite.com/2015/11/21/android广播使用/index.html">
+<meta property="og:title" content="链表和数组">
+<meta property="og:url" content="http://yoursite.com/2015/12/14/链表和数组的区别/index.html">
 <meta property="og:site_name" content="jianghao's blog">
-<meta property="og:description" content="BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存">
-<meta property="og:updated_time" content="2015-11-21T09:22:47.000Z">
+<meta property="og:description" content="##链表和数组的区别1）数组在内存中是逐个存放的，也就是说倘若数组的第一个元素在地址A,则数组第二个元素就在地址A+1。
+而链表则不是，链表每个节点没有相对固定的位置关系。某个节点在地址A其后的节点不一定是A+1,而在内存的其他空闲区域，呈现一种随机的状态。
+2）数组一旦显式的被申明后，其大小就固定了，不能动态进行扩充。而链表则可以，可以动态生成节点并且添加到已有的链表后面。
+3）链表灵活，但是空">
+<meta property="og:updated_time" content="2015-12-14T14:43:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android广播的使用">
-<meta name="twitter:description" content="BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存">
+<meta name="twitter:title" content="链表和数组">
+<meta name="twitter:description" content="##链表和数组的区别1）数组在内存中是逐个存放的，也就是说倘若数组的第一个元素在地址A,则数组第二个元素就在地址A+1。
+而链表则不是，链表每个节点没有相对固定的位置关系。某个节点在地址A其后的节点不一定是A+1,而在内存的其他空闲区域，呈现一种随机的状态。
+2）数组一旦显式的被申明后，其大小就固定了，不能动态进行扩充。而链表则可以，可以动态生成节点并且添加到已有的链表后面。
+3）链表灵活，但是空">
 
 
 
@@ -72,7 +81,7 @@
   };
 </script>
 
-  <title> android广播的使用 | jianghao's blog </title>
+  <title> 链表和数组 | jianghao's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -202,7 +211,7 @@
             
             
               
-                android广播的使用
+                链表和数组
               
             
           </h1>
@@ -211,19 +220,34 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-21T17:22:47+08:00" content="2015-11-21">
-              2015-11-21
+            <time itemprop="dateCreated" datetime="2015-12-14T22:37:49+08:00" content="2015-12-14">
+              2015-12-14
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/21/android广播使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/21/android广播使用/" itemprop="commentsCount"></span>
+                <a href="/2015/12/14/链表和数组的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/14/链表和数组的区别/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -248,42 +272,36 @@
       
 
       
-        <span itemprop="articleBody"><p>BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。<br>在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存进度，等等。<br>Android中的广播机制设计的非常出色，很多事情原本需要开发者亲自操作的，现在只需等待广播告知自己就可以了，大大减少了开发的工作量和开发周期。而作为应用开发者，就需要数练掌握Android系统提供的一个开发利器，那就是BroadcastReceiver。下面我们就对BroadcastReceiver逐一地分析和演练，了解和掌握它的各种功能和用法。</p>
-<p>.首先，我们来演示一下创建一个BroadcastReceiver，并让这个BroadcastReceiver能够根据我们的需要来运行。要创建自己的BroadcastReceiver对象，我们需要继承android.content.BroadcastReceiver，并实现其onReceive方法。下面我们就创建一个名为MyReceiver广播接收者：<br>package com.scott.receiver;  </p>
-<p>import android.content.BroadcastReceiver;<br>import android.content.Context;<br>import android.content.Intent;<br>import android.util.Log;  </p>
-<p>public class MyReceiver extends BroadcastReceiver {  </p>
-<pre><code><span class="keyword">private</span> static final <span class="built_in">String</span> <span class="built_in">TAG</span> = <span class="string">"MyReceiver"</span>;  
-
-@Override  
-<span class="keyword">public</span> <span class="literal">void</span> onReceive(Context context, Intent intent) {  
-    <span class="built_in">String</span> msg = intent<span class="built_in">.</span>getStringExtra(<span class="string">"msg"</span>);  
-    <span class="keyword">Log</span><span class="built_in">.</span>i(<span class="built_in">TAG</span>, msg);  
-}  
-</code></pre><p>}<br>.在onReceive方法内，我们可以获取随广播而来的Intent中的数据，这非常重要，就像无线电一样，包含很多有用的信息。<br>在创建完我们的BroadcastReceiver之后，还不能够使它进入工作状态，我们需要为它注册一个指定的广播地址。没有注册广播地址的BroadcastReceiver就像一个缺少选台按钮的收音机，虽然功能俱备，但也无法收到电台的信号。下面我们就来介绍一下如何为BroadcastReceiver注册广播地址。</p>
-<p>##静态注册<br>.静态注册是在AndroidManifest.xml文件中配置的，我们就来为MyReceiver注册一个广播地址：<br>[html] view plaincopy</p>
-<p><receiver android:name=".MyReceiver"><br>            <intent-filter><br>                <action android:name="android.intent.action.MY_BROADCAST"><br>                <category android:name="android.intent.category.DEFAULT"><br>            </category></action></intent-filter><br>        </receiver><br>配置了以上信息之后，只要是android.intent.action.MY_BROADCAST这个地址的广播，MyReceiver都能够接收的到。注意，这种方式的注册是常驻型的，也就是说当应用关闭后，如果有广播信息传来，MyReceiver也会被系统调用而自动运行。</p>
+        <span itemprop="articleBody"><p>##链表和数组的区别<br>1）数组在内存中是逐个存放的，也就是说倘若数组的第一个元素在地址A,则数组第二个元素就在地址A+1。</p>
+<p>而链表则不是，链表每个节点没有相对固定的位置关系。某个节点在地址A其后的节点不一定是A+1,而在内存的其他空闲区域，呈现一种随机的状态。</p>
+<p>2）数组一旦显式的被申明后，其大小就固定了，不能动态进行扩充。而链表则可以，可以动态生成节点并且添加到已有的链表后面。</p>
+<p>3）链表灵活，但是空间和时间额外耗费较大；数组大小固定，元素位置固定，但是操作不灵活，且容易浪费空间，但是时间耗费较小，尤其是元素变化不大的时候效率很高。双向链表比单向的更灵活，但是空间耗费也更大</p>
+<p>。。。。。</p>
+<p>链表的特性是在中间任意位置添加删除元素的都非常的快，不需要移动其它的元素。链表顾名思义，要把各个元素链接起来才算撒。<br>通常链表每一个元素都要保存一个指向下一个元素的指针（单链表）。双链表的化每个元素即要保存到下一个元素的指针，还要保存一个上一个元素的指针。循环链表则把最后一个元素中保存下一个元素指针指向第一个元素。数组是一组具有相同类型和名称的变量的集合。这些变量称为数组的元素,每个数组元素都有一个编号,这个编号叫做下标,我们可以通过下标来区别这些元素。数组元素的个数有时也称之为数组的长度。 </p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/21/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2015/12/05/intent传递数据量问题/" rel="next" title="intent传递数据量问题">
+                <i class="fa fa-chevron-left"></i> intent传递数据量问题
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/05/intent传递数据量问题/" rel="prev" title="intent传递数据量问题">
-                intent传递数据量问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -310,8 +328,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/21/android广播使用/"
-           data-title="android广播的使用" data-url="http://yoursite.com/2015/11/21/android广播使用/">
+      <div class="ds-thread" data-thread-key="2015/12/14/链表和数组的区别/"
+           data-title="链表和数组" data-url="http://yoursite.com/2015/12/14/链表和数组的区别/">
       </div>
     
   </div>
