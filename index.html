@@ -272,16 +272,10 @@
         
           <span itemprop="articleBody">
             
-              <p>###对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：</p>
-<p>##limit：所有对Buffer读写操作都会以limit变量的值作为上限。</p>
-<p>##position：代表对缓冲区进行读写时，当前游标的位置。</p>
-<p>##capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。</p>
-<p>###flip、rewind、clear这三个方法便是用来设置这些值的。</p>
-<p>##clear方法<br>public final Buffer clear()<br>{<br>    position = 0; //重置当前读写位置<br>    limit = capacity;<br>    mark = -1;  //取消标记<br>    return this;<br>}<br>clear方法将缓冲区清空，一般是在重新写缓冲区时调用。</p>
-<p>##flip方法<br>public final Buffer flip() {<br> limit = position;<br> position = 0;<br> mark = -1;<br> return this;<br>}<br>反转缓冲区。首先将限制设置为当前位置，然后将位置设置为 0。如果已定义了标记，则丢弃该标记。 常与compact方法一起使用。通常情况下，在准备从缓冲区中读取数据时调用flip方法。</p>
-<p>##rewind方法<br>public final Buffer rewind() {<br> position = 0;<br> mark = -1;<br>return this;<br>}</p>
-<p>##以上三种方法均使用final修饰，java.nio.Buffer的所有子类均使用同一种flip、clear和rewind机制。</p>
-
+              <h3 id="对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：">对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：</h3><h2 id="limit：所有对Buffer读写操作都会以limit变量的值作为上限。">limit：所有对Buffer读写操作都会以limit变量的值作为上限。</h2><h2 id="position：代表对缓冲区进行读写时，当前游标的位置。">position：代表对缓冲区进行读写时，当前游标的位置。</h2><h2 id="capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。">capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。</h2><h3 id="flip、rewind、clear这三个方法便是用来设置这些值的。">flip、rewind、clear这三个方法便是用来设置这些值的。</h3><h2 id="clear方法">clear方法</h2><p>public final Buffer clear()<br>{<br>    position = 0; //重置当前读写位置<br>    limit = capacity;<br>    mark = -1;  //取消标记<br>    return this;<br>}<br>clear方法将缓冲区清空，一般是在重新写缓冲区时调用。</p>
+<h2 id="flip方法">flip方法</h2><p>public final Buffer flip() {<br> limit = position;<br> position = 0;<br> mark = -1;<br> return this;<br>}<br>反转缓冲区。首先将限制设置为当前位置，然后将位置设置为 0。如果已定义了标记，则丢弃该标记。 常与compact方法一起使用。通常情况下，在准备从缓冲区中读取数据时调用flip方法。</p>
+<h2 id="rewind方法">rewind方法</h2><p>public final Buffer rewind() {<br> position = 0;<br> mark = -1;<br>return this;<br>}</p>
+<h2 id="以上三种方法均使用final修饰，java-nio-Buffer的所有子类均使用同一种flip、clear和rewind机制。">以上三种方法均使用final修饰，java.nio.Buffer的所有子类均使用同一种flip、clear和rewind机制。</h2>
             
           </span>
         
