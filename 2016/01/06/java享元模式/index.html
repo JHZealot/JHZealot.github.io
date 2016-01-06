@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="java," />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -51,25 +51,19 @@
 
 
 
-<meta name="description" content="##链表和数组的区别1）数组在内存中是逐个存放的，也就是说倘若数组的第一个元素在地址A,则数组第二个元素就在地址A+1。
-而链表则不是，链表每个节点没有相对固定的位置关系。某个节点在地址A其后的节点不一定是A+1,而在内存的其他空闲区域，呈现一种随机的状态。
-2）数组一旦显式的被申明后，其大小就固定了，不能动态进行扩充。而链表则可以，可以动态生成节点并且添加到已有的链表后面。
-3）链表灵活，但是空">
+<meta name="description" content="享元模式以共享的方式高效地支持大量细粒度对象。在面向对象的程序设计语言来看在面向对象的程序设计语言看来，一切事务都被描述成对象（Object）。对象拥有状态（属性）和行为（方法），我们将具有相同行为的对象抽象为类（Class），类可以被看作只保留行为的对象模板，类可以在运行时被重新赋予状态数据从而形成了对象。
+在运行时，对象占用一定的内存空间用来存储状态数据。如果不作特殊的处理，尽管是由同一个类生">
 <meta property="og:type" content="article">
-<meta property="og:title" content="链表和数组">
-<meta property="og:url" content="http://yoursite.com/2015/12/14/链表和数组的区别/index.html">
+<meta property="og:title" content="java享元模式（Flyweight）">
+<meta property="og:url" content="http://yoursite.com/2016/01/06/java享元模式/index.html">
 <meta property="og:site_name" content="jianghao's blog">
-<meta property="og:description" content="##链表和数组的区别1）数组在内存中是逐个存放的，也就是说倘若数组的第一个元素在地址A,则数组第二个元素就在地址A+1。
-而链表则不是，链表每个节点没有相对固定的位置关系。某个节点在地址A其后的节点不一定是A+1,而在内存的其他空闲区域，呈现一种随机的状态。
-2）数组一旦显式的被申明后，其大小就固定了，不能动态进行扩充。而链表则可以，可以动态生成节点并且添加到已有的链表后面。
-3）链表灵活，但是空">
-<meta property="og:updated_time" content="2015-12-14T14:43:16.000Z">
+<meta property="og:description" content="享元模式以共享的方式高效地支持大量细粒度对象。在面向对象的程序设计语言来看在面向对象的程序设计语言看来，一切事务都被描述成对象（Object）。对象拥有状态（属性）和行为（方法），我们将具有相同行为的对象抽象为类（Class），类可以被看作只保留行为的对象模板，类可以在运行时被重新赋予状态数据从而形成了对象。
+在运行时，对象占用一定的内存空间用来存储状态数据。如果不作特殊的处理，尽管是由同一个类生">
+<meta property="og:updated_time" content="2016-01-06T01:37:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="链表和数组">
-<meta name="twitter:description" content="##链表和数组的区别1）数组在内存中是逐个存放的，也就是说倘若数组的第一个元素在地址A,则数组第二个元素就在地址A+1。
-而链表则不是，链表每个节点没有相对固定的位置关系。某个节点在地址A其后的节点不一定是A+1,而在内存的其他空闲区域，呈现一种随机的状态。
-2）数组一旦显式的被申明后，其大小就固定了，不能动态进行扩充。而链表则可以，可以动态生成节点并且添加到已有的链表后面。
-3）链表灵活，但是空">
+<meta name="twitter:title" content="java享元模式（Flyweight）">
+<meta name="twitter:description" content="享元模式以共享的方式高效地支持大量细粒度对象。在面向对象的程序设计语言来看在面向对象的程序设计语言看来，一切事务都被描述成对象（Object）。对象拥有状态（属性）和行为（方法），我们将具有相同行为的对象抽象为类（Class），类可以被看作只保留行为的对象模板，类可以在运行时被重新赋予状态数据从而形成了对象。
+在运行时，对象占用一定的内存空间用来存储状态数据。如果不作特殊的处理，尽管是由同一个类生">
 
 
 
@@ -81,7 +75,7 @@
   };
 </script>
 
-  <title> 链表和数组 | jianghao's blog </title>
+  <title> java享元模式（Flyweight） | jianghao's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -211,7 +205,7 @@
             
             
               
-                链表和数组
+                java享元模式（Flyweight）
               
             
           </h1>
@@ -220,8 +214,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-14T22:37:49+08:00" content="2015-12-14">
-              2015-12-14
+            <time itemprop="dateCreated" datetime="2016-01-06T09:19:23+08:00" content="2016-01-06">
+              2016-01-06
             </time>
           </span>
 
@@ -230,8 +224,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -246,8 +240,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/14/链表和数组的区别/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/14/链表和数组的区别/" itemprop="commentsCount"></span>
+                <a href="/2016/01/06/java享元模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/06/java享元模式/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -272,12 +266,70 @@
       
 
       
-        <span itemprop="articleBody"><p>##链表和数组的区别<br>1）数组在内存中是逐个存放的，也就是说倘若数组的第一个元素在地址A,则数组第二个元素就在地址A+1。</p>
-<p>而链表则不是，链表每个节点没有相对固定的位置关系。某个节点在地址A其后的节点不一定是A+1,而在内存的其他空闲区域，呈现一种随机的状态。</p>
-<p>2）数组一旦显式的被申明后，其大小就固定了，不能动态进行扩充。而链表则可以，可以动态生成节点并且添加到已有的链表后面。</p>
-<p>3）链表灵活，但是空间和时间额外耗费较大；数组大小固定，元素位置固定，但是操作不灵活，且容易浪费空间，但是时间耗费较小，尤其是元素变化不大的时候效率很高。双向链表比单向的更灵活，但是空间耗费也更大</p>
-<p>。。。。。</p>
-<p>链表的特性是在中间任意位置添加删除元素的都非常的快，不需要移动其它的元素。链表顾名思义，要把各个元素链接起来才算撒。<br>通常链表每一个元素都要保存一个指向下一个元素的指针（单链表）。双链表的化每个元素即要保存到下一个元素的指针，还要保存一个上一个元素的指针。循环链表则把最后一个元素中保存下一个元素指针指向第一个元素。数组是一组具有相同类型和名称的变量的集合。这些变量称为数组的元素,每个数组元素都有一个编号,这个编号叫做下标,我们可以通过下标来区别这些元素。数组元素的个数有时也称之为数组的长度。 </p>
+        <span itemprop="articleBody"><hr>
+<p>享元模式以共享的方式高效地支持大量细粒度对象。<br>在面向对象的程序设计语言来看在面向对象的程序设计语言看来，一切事务都被描述成对象（Object）。对象拥有状态（属性）和行为（方法），我们将具有相同行为的对象抽象为类（Class），类可以被看作只保留行为的对象模板，类可以在运行时被重新赋予状态数据从而形成了对象。</p>
+<p>在运行时，对象占用一定的内存空间用来存储状态数据。如果不作特殊的处理，尽管是由同一个类生成的两个对象，而且这两个对象的的状态数据完 全相同，但在内存中还是会占用两份空间，这样的情况对于程序的功能也许并没有影响，但如果把状态相同的同一类对象在内存中进行合并，必然会大大减少存储空间的浪费。</p>
+<pre><code> 举一个现实中的例子，某淘宝店经营一款畅销女式皮鞋，每天需要处理大量的订单信息，在订单中需要注明客户购买的皮鞋信息，我们将皮鞋产品抽象出来：
+class Shoe{ 
+ <span class="keyword">String</span> <span class="built_in">color</span>;<span class="comment">//颜色 </span>
+ <span class="built_in">int</span> <span class="built_in">size</span>;<span class="comment">//尺寸 </span>
+ <span class="keyword">String</span> position;<span class="comment">//库存位置 </span>
+
+ <span class="keyword">public</span> <span class="keyword">String</span> getColor() { 
+     <span class="keyword">return</span> <span class="built_in">color</span>; 
+ } 
+
+ <span class="keyword">public</span> <span class="keyword">void</span> setColor(<span class="keyword">String</span> <span class="built_in">color</span>) { 
+     <span class="keyword">this</span>.<span class="built_in">color</span> = <span class="built_in">color</span>; 
+ } 
+
+ <span class="keyword">public</span> <span class="built_in">int</span> getSize() { 
+     <span class="keyword">return</span> <span class="built_in">size</span>; 
+ } 
+
+ <span class="keyword">public</span> <span class="keyword">void</span> setSize(<span class="built_in">int</span> <span class="built_in">size</span>) { 
+     <span class="keyword">this</span>.<span class="built_in">size</span> = <span class="built_in">size</span>; 
+ } 
+
+ <span class="keyword">public</span> <span class="keyword">String</span> getPosition() { 
+     <span class="keyword">return</span> position; 
+ } 
+
+ <span class="keyword">public</span> <span class="keyword">void</span> setPosition(<span class="keyword">String</span> position) { 
+     <span class="keyword">this</span>.position = position; 
+ } 
+
+}
+正如上面的代码所描述，皮鞋分为颜色、尺寸和库存位置三项状态数据。其中颜色和尺寸为皮鞋的自然状态，我们称之为对象内部状态，这些状态数据只与对象本身有关，不随外界环境的改变而发生变化。再来看库存位置，我们将这个状态称为对象的外部状态，外部状态与对象本身无必然关系，外部状态总是因为外界环境的改变而变化，也就是说外部状态是由外界环境来决定的。在本例中，皮鞋今天放在A仓库，明天可能放在B仓库，但无论存放在哪个仓库，同一只皮鞋就是同一只皮鞋，它的颜色和尺寸不会随着存放位置的不同而发生变化。
+</code></pre><p> 享元模式的核心思想就是将内部状态相同的对象在存储时进行缓存。也就是说同一颜色同一尺寸的皮鞋，我们在内存中只保留一份实例，在访问对象时，我们访问的其实是对象缓存的版本，而不是每次都重新生成对象。</p>
+<p>享元模式仍然允许对象具有外部属性，由于我们访问的始终是对象缓存的版本，所以我们在使用对象前，必须将外部状态重新注入对象。由于享元模式禁止生成新的对象，所以在使用享元模式时，通常伴随着工厂方法的应用。我们来看下面的例子：<br>     class ShoeFactory { </p>
+<pre><code>Collection&lt;Shoe&gt; shoes = <span class="keyword">new</span> ArrayList&lt;Shoe&gt;(); 
+
+Shoe getSheo(<span class="keyword">String</span> <span class="built_in">color</span>, <span class="built_in">int</span> <span class="built_in">size</span>, <span class="keyword">String</span> position)             
+
+{ 
+    <span class="comment">//首先在缓存中查找对象 </span>
+    <span class="keyword">for</span> (Shoe shoe : shoes) { 
+        <span class="keyword">if</span> (shoe.getColor() == <span class="built_in">color</span> &amp;&amp;shoe.getSize()== <span class="built_in">size</span>) { 
+            <span class="comment">//在缓存中命中对象后还原对象的外部属性 </span>
+            shoe.setPosition(position); 
+            <span class="keyword">return</span> shoe; 
+        } 
+    } 
+    <span class="comment">//如果缓存未命中则新建对象并加入缓存 </span>
+    Shoe shoe = <span class="keyword">new</span> Shoe(); 
+    shoe.setColor(<span class="built_in">color</span>); 
+    shoe.setSize(<span class="built_in">size</span>); 
+    shoe.setPosition(position); 
+    shoes.<span class="built_in">add</span>(shoe); 
+    <span class="keyword">return</span> shoe; 
+    } 
+ } 
+
+    通过ShoeFactory工厂，我们每次拿到的皮鞋都是缓存的版本，如果缓存中没有我们需要的对象，则新创建对象然后加入缓存中。注意上例中对象的外部属性position是如何注回对象的。
+</code></pre><p>当我们在自己的业务场景中应用享元模式时，一定要注意分清对象的内部状态和外部状态，享元模式强调缓存的版本只能包含对象的内部状态。</p>
+<p>事实上，Java中的String和Integer类都是享元模式的应用的例子，String类内部对所有的字符串对象进行缓存，相同的字符串在内存中只会保留一个版本。类似的，Integer类在内部对小于255的整数也进行了缓存。</p>
+<p>享元模式在企业级架构设计中应用的例子比比皆是，现代大型企业级应用中不可或缺的缓存体系也正是在享元模式的基础上逐步完善和发展起来的。  </p>
 </span>
       
     </div>
@@ -286,7 +338,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag">#java</a>
+            <a href="/tags/设计模式/" rel="tag">#设计模式</a>
           
         </div>
       
@@ -295,17 +347,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/05/intent传递数据量问题/" rel="next" title="intent传递数据量问题">
-                <i class="fa fa-chevron-left"></i> intent传递数据量问题
+              <a href="/2015/12/22/java中-byteByffer中的clear、flip、rewind/" rel="next" title="java中 byteByffer中的clear、flip、rewind">
+                <i class="fa fa-chevron-left"></i> java中 byteByffer中的clear、flip、rewind
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/22/java中-byteByffer中的clear、flip、rewind/" rel="prev" title="java中 byteByffer中的clear、flip、rewind">
-                java中 byteByffer中的clear、flip、rewind <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -332,8 +380,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/14/链表和数组的区别/"
-           data-title="链表和数组" data-url="http://yoursite.com/2015/12/14/链表和数组的区别/">
+      <div class="ds-thread" data-thread-key="2016/01/06/java享元模式/"
+           data-title="java享元模式（Flyweight）" data-url="http://yoursite.com/2016/01/06/java享元模式/">
       </div>
     
   </div>

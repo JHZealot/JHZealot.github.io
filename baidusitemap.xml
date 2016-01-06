@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/01/06/java%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2016-01-06T01:37:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>java享元模式（Flyweight）</title>
+        <pubTime>2016-01-06T01:19:23.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://yoursite.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2015/12/22/java%E4%B8%AD-byteByffer%E4%B8%AD%E7%9A%84clear%E3%80%81flip%E3%80%81rewind/</loc>
     <lastmod>2015-12-22T07:22:43.000Z</lastmod>
     <data>
