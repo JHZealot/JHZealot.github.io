@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="bundle,intent," />
+  <meta name="keywords" content="BroadcastReceiver," />
 
 
 
@@ -51,19 +51,16 @@
 
 
 
-<meta name="description" content="传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
-在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte数组、每一个词组的拼音、词语、语音信息），">
+<meta name="description" content="BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存">
 <meta property="og:type" content="article">
-<meta property="og:title" content="intent传递数据量问题">
-<meta property="og:url" content="http://yoursite.com/2015/12/05/intent传递数据量问题/index.html">
+<meta property="og:title" content="android广播的使用">
+<meta property="og:url" content="http://yoursite.com/2015/12/05/android广播使用/index.html">
 <meta property="og:site_name" content="jianghao's blog">
-<meta property="og:description" content="传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
-在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte数组、每一个词组的拼音、词语、语音信息），">
-<meta property="og:updated_time" content="2016-01-06T01:45:15.000Z">
+<meta property="og:description" content="BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存">
+<meta property="og:updated_time" content="2016-01-12T12:47:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="intent传递数据量问题">
-<meta name="twitter:description" content="传输超过1M的数据量会crash在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：
-在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte数组、每一个词组的拼音、词语、语音信息），">
+<meta name="twitter:title" content="android广播的使用">
+<meta name="twitter:description" content="BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存">
 
 
 
@@ -75,7 +72,7 @@
   };
 </script>
 
-  <title> intent传递数据量问题 | jianghao's blog </title>
+  <title> android广播的使用 | jianghao's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -205,7 +202,7 @@
             
             
               
-                intent传递数据量问题
+                android广播的使用
               
             
           </h1>
@@ -240,8 +237,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/05/intent传递数据量问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/05/intent传递数据量问题/" itemprop="commentsCount"></span>
+                <a href="/2015/12/05/android广播使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/05/android广播使用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -267,14 +264,20 @@
 
       
         <span itemprop="articleBody"><hr>
-<h2 id="传输超过1M的数据量会crash">传输超过1M的数据量会crash</h2><p>在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：</p>
-<p>在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte数组、每一个词组的拼音、词语、语音信息），经过分析发现是由于bundle不能传递大容量的数据信息，在stackoverflow里面查阅发现有同行遇到类似的问题：</p>
-<p>（1）“The size limit of Intent is still pretty low in Jelly Bean, which is somewhat lower than 1MB (around 90K), so you should always be cautious about your data length, even if your application targets only latest Android versions.”</p>
-<p>（2）“As per my experience (sometime ago), you are able to put up to 1MB of data in a Bundleencapsulated inside Intent. I think, this restriction was valid up till Froyo or GingerBread.”</p>
-<p>所以在通过bundle传递数据时只能传递较小的数据信息，对于在不同组件之间需要传递大容量数据的情况时，有几种替代方式可以解决不能用bundle传递这些数据的问题：</p>
-<h2 id="方法一：">方法一：</h2><p>将需要传递的数据写在临时文件或者数据库中，再跳转到另外一个组件的时候再去读取这些数据信息，这种处理方式会由于读写文件较为耗时导致程序运行效率较低；</p>
-<h2 id="方法二：">方法二：</h2><p>将需要传递的数据信息封装在一个静态的类中（注意当前组件和要跳转到的组件必须属于同一个进程，因为进程之间才能够共享数据），在当前组件中为类设置内容，然后再跳转到的组件中去取，这种处理方式效率很高，但是会破坏程序的独立性。</p>
-<p>具体采用哪种替代方式取决于具体的情况，建议采取第二种处理方式，因为这样会大大提高程序的运行效率，至于程序的独立性，看你怎么去封装这个类了。</p>
+<p>BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。<br>在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存进度，等等。<br>Android中的广播机制设计的非常出色，很多事情原本需要开发者亲自操作的，现在只需等待广播告知自己就可以了，大大减少了开发的工作量和开发周期。而作为应用开发者，就需要数练掌握Android系统提供的一个开发利器，那就是BroadcastReceiver。下面我们就对BroadcastReceiver逐一地分析和演练，了解和掌握它的各种功能和用法。</p>
+<p>.首先，我们来演示一下创建一个BroadcastReceiver，并让这个BroadcastReceiver能够根据我们的需要来运行。要创建自己的BroadcastReceiver对象，我们需要继承android.content.BroadcastReceiver，并实现其onReceive方法。下面我们就创建一个名为MyReceiver广播接收者：<br>package com.scott.receiver;  </p>
+<p>import android.content.BroadcastReceiver;<br>import android.content.Context;<br>import android.content.Intent;<br>import android.util.Log;  </p>
+<p>public class MyReceiver extends BroadcastReceiver {  </p>
+<pre><code><span class="keyword">private</span> static final <span class="built_in">String</span> <span class="built_in">TAG</span> = <span class="string">"MyReceiver"</span>;  
+
+@Override  
+<span class="keyword">public</span> <span class="literal">void</span> onReceive(Context context, Intent intent) {  
+    <span class="built_in">String</span> msg = intent<span class="built_in">.</span>getStringExtra(<span class="string">"msg"</span>);  
+    <span class="keyword">Log</span><span class="built_in">.</span>i(<span class="built_in">TAG</span>, msg);  
+}  
+</code></pre><p>}<br>.在onReceive方法内，我们可以获取随广播而来的Intent中的数据，这非常重要，就像无线电一样，包含很多有用的信息。<br>在创建完我们的BroadcastReceiver之后，还不能够使它进入工作状态，我们需要为它注册一个指定的广播地址。没有注册广播地址的BroadcastReceiver就像一个缺少选台按钮的收音机，虽然功能俱备，但也无法收到电台的信号。下面我们就来介绍一下如何为BroadcastReceiver注册广播地址。</p>
+<p>##静态注册<br>.静态注册是在AndroidManifest.xml文件中配置的，我们就来为MyReceiver注册一个广播地址：<br>[html] view plaincopy</p>
+<p><receiver android:name=".MyReceiver"><br>            <intent-filter><br>                <action android:name="android.intent.action.MY_BROADCAST"><br>                <category android:name="android.intent.category.DEFAULT"><br>            </category></action></intent-filter><br>        </receiver><br>配置了以上信息之后，只要是android.intent.action.MY_BROADCAST这个地址的广播，MyReceiver都能够接收的到。注意，这种方式的注册是常驻型的，也就是说当应用关闭后，如果有广播信息传来，MyReceiver也会被系统调用而自动运行。</p>
 </span>
       
     </div>
@@ -283,9 +286,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/bundle/" rel="tag">#bundle</a>
-          
-            <a href="/tags/intent/" rel="tag">#intent</a>
+            <a href="/tags/BroadcastReceiver/" rel="tag">#BroadcastReceiver</a>
           
         </div>
       
@@ -298,8 +299,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/14/链表和数组的区别/" rel="prev" title="链表和数组">
-                链表和数组 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/07/intent传递数据量问题/" rel="prev" title="intent传递数据量问题">
+                intent传递数据量问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -327,8 +328,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/05/intent传递数据量问题/"
-           data-title="intent传递数据量问题" data-url="http://yoursite.com/2015/12/05/intent传递数据量问题/">
+      <div class="ds-thread" data-thread-key="2015/12/05/android广播使用/"
+           data-title="android广播的使用" data-url="http://yoursite.com/2015/12/05/android广播使用/">
       </div>
     
   </div>
@@ -386,7 +387,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -418,7 +419,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#传输超过1M的数据量会crash"><span class="nav-number">1.</span> <span class="nav-text">传输超过1M的数据量会crash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一："><span class="nav-number">2.</span> <span class="nav-text">方法一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二："><span class="nav-number">3.</span> <span class="nav-text">方法二：</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

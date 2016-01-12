@@ -272,7 +272,8 @@
         
           <span itemprop="articleBody">
             
-              <h3 id="1-final方法：">1.final方法：</h3><p>将方法声明为final那有两个原因<br>第一就是说明你已经知道这个方法提供的功能已经满足你要求，不需要进行扩展，并且也不允许任何从此类继承的类来覆写这个方法，但是继承仍然可以继承这个方法，也就是说可以直接使用。</p>
+              <hr>
+<h3 id="1-final方法：">1.final方法：</h3><p>将方法声明为final那有两个原因<br>第一就是说明你已经知道这个方法提供的功能已经满足你要求，不需要进行扩展，并且也不允许任何从此类继承的类来覆写这个方法，但是继承仍然可以继承这个方法，也就是说可以直接使用。</p>
 <p>第二就是允许编译器将所有对此方法的调用转化为inline调用的机制，它会使你在调用final方法时，直接将方法主体插入到调用处，而不是进行例行的方法调用，例如保存断点，压栈等，这样可能会使你的程序效率有所提高，然而当你的方法主体非常庞大时，或你在多处调用此方法，那么你的调用主体代码便会迅速膨胀，可能反而会影响效率，所以你要慎用final进行方法定义。</p>
 <h3 id="2-静态方法和实例方法">2.静态方法和实例方法</h3><p>在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。</p>
 <p>静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。</p>
@@ -327,8 +328,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/07/android-service断点续传/" itemprop="url">
-                  未命名
+                <a class="post-title-link" href="/2016/01/10/android-service断点续传/" itemprop="url">
+                  Android-Service断点续传
                 </a>
               
             
@@ -338,8 +339,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-07T16:45:01+08:00" content="2016-01-07">
-              2016-01-07
+            <time itemprop="dateCreated" datetime="2016-01-10T09:19:23+08:00" content="2016-01-10">
+              2016-01-10
             </time>
           </span>
 
@@ -364,97 +365,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/07/android-service断点续传/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/07/android-service断点续传/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h3 id="获得网络文件的长度">获得网络文件的长度</h3><h3 id="在本地创建一个文件，设置其长度">在本地创建一个文件，设置其长度</h3><h3 id="从数据库中获得上次下载的进度">从数据库中获得上次下载的进度</h3><h3 id="从上次位置下载数据，同时保存进度到数据库">从上次位置下载数据，同时保存进度到数据库</h3><h3 id="将下载的进度回传给activity">将下载的进度回传给activity</h3><h3 id="下载完成后删除下载信息">下载完成后删除下载信息</h3>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/06/android广播使用/" itemprop="url">
-                  android广播的使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-06T09:44:13+08:00" content="2016-01-06">
-              2016-01-06
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/06/android广播使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/06/android广播使用/" itemprop="commentsCount"></span>
+                <a href="/2016/01/10/android-service断点续传/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/10/android-service断点续传/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -479,21 +391,7 @@
           <span itemprop="articleBody">
             
               <hr>
-<p>BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。<br>在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存进度，等等。<br>Android中的广播机制设计的非常出色，很多事情原本需要开发者亲自操作的，现在只需等待广播告知自己就可以了，大大减少了开发的工作量和开发周期。而作为应用开发者，就需要数练掌握Android系统提供的一个开发利器，那就是BroadcastReceiver。下面我们就对BroadcastReceiver逐一地分析和演练，了解和掌握它的各种功能和用法。</p>
-<p>.首先，我们来演示一下创建一个BroadcastReceiver，并让这个BroadcastReceiver能够根据我们的需要来运行。要创建自己的BroadcastReceiver对象，我们需要继承android.content.BroadcastReceiver，并实现其onReceive方法。下面我们就创建一个名为MyReceiver广播接收者：<br>package com.scott.receiver;  </p>
-<p>import android.content.BroadcastReceiver;<br>import android.content.Context;<br>import android.content.Intent;<br>import android.util.Log;  </p>
-<p>public class MyReceiver extends BroadcastReceiver {  </p>
-<pre><code><span class="keyword">private</span> static final <span class="built_in">String</span> <span class="built_in">TAG</span> = <span class="string">"MyReceiver"</span>;  
-
-@Override  
-<span class="keyword">public</span> <span class="literal">void</span> onReceive(Context context, Intent intent) {  
-    <span class="built_in">String</span> msg = intent<span class="built_in">.</span>getStringExtra(<span class="string">"msg"</span>);  
-    <span class="keyword">Log</span><span class="built_in">.</span>i(<span class="built_in">TAG</span>, msg);  
-}  
-</code></pre><p>}<br>.在onReceive方法内，我们可以获取随广播而来的Intent中的数据，这非常重要，就像无线电一样，包含很多有用的信息。<br>在创建完我们的BroadcastReceiver之后，还不能够使它进入工作状态，我们需要为它注册一个指定的广播地址。没有注册广播地址的BroadcastReceiver就像一个缺少选台按钮的收音机，虽然功能俱备，但也无法收到电台的信号。下面我们就来介绍一下如何为BroadcastReceiver注册广播地址。</p>
-<p>##静态注册<br>.静态注册是在AndroidManifest.xml文件中配置的，我们就来为MyReceiver注册一个广播地址：<br>[html] view plaincopy</p>
-<p><receiver android:name=".MyReceiver"><br>            <intent-filter><br>                <action android:name="android.intent.action.MY_BROADCAST"><br>                <category android:name="android.intent.category.DEFAULT"><br>            </category></action></intent-filter><br>        </receiver><br>配置了以上信息之后，只要是android.intent.action.MY_BROADCAST这个地址的广播，MyReceiver都能够接收的到。注意，这种方式的注册是常驻型的，也就是说当应用关闭后，如果有广播信息传来，MyReceiver也会被系统调用而自动运行。</p>
-
+<h3 id="获得网络文件的长度">获得网络文件的长度</h3><h3 id="在本地创建一个文件，设置其长度">在本地创建一个文件，设置其长度</h3><h3 id="从数据库中获得上次下载的进度">从数据库中获得上次下载的进度</h3><h3 id="从上次位置下载数据，同时保存进度到数据库">从上次位置下载数据，同时保存进度到数据库</h3><h3 id="将下载的进度回传给activity">将下载的进度回传给activity</h3><h3 id="下载完成后删除下载信息">下载完成后删除下载信息</h3>
             
           </span>
         
@@ -924,8 +822,121 @@ Shoe getSheo(<span class="keyword">String</span> <span class="built_in">color</s
             
               
                 
-                <a class="post-title-link" href="/2015/12/05/intent传递数据量问题/" itemprop="url">
+                <a class="post-title-link" href="/2015/12/07/intent传递数据量问题/" itemprop="url">
                   intent传递数据量问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-07T10:34:27+08:00" content="2015-12-07">
+              2015-12-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/07/intent传递数据量问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/07/intent传递数据量问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <hr>
+<h2 id="传输超过1M的数据量会crash">传输超过1M的数据量会crash</h2><p>在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：</p>
+<p>在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte数组、每一个词组的拼音、词语、语音信息），经过分析发现是由于bundle不能传递大容量的数据信息，在stackoverflow里面查阅发现有同行遇到类似的问题：</p>
+<p>（1）“The size limit of Intent is still pretty low in Jelly Bean, which is somewhat lower than 1MB (around 90K), so you should always be cautious about your data length, even if your application targets only latest Android versions.”</p>
+<p>（2）“As per my experience (sometime ago), you are able to put up to 1MB of data in a Bundleencapsulated inside Intent. I think, this restriction was valid up till Froyo or GingerBread.”</p>
+<p>所以在通过bundle传递数据时只能传递较小的数据信息，对于在不同组件之间需要传递大容量数据的情况时，有几种替代方式可以解决不能用bundle传递这些数据的问题：</p>
+<h2 id="方法一：">方法一：</h2><p>将需要传递的数据写在临时文件或者数据库中，再跳转到另外一个组件的时候再去读取这些数据信息，这种处理方式会由于读写文件较为耗时导致程序运行效率较低；</p>
+<h2 id="方法二：">方法二：</h2><p>将需要传递的数据信息封装在一个静态的类中（注意当前组件和要跳转到的组件必须属于同一个进程，因为进程之间才能够共享数据），在当前组件中为类设置内容，然后再跳转到的组件中去取，这种处理方式效率很高，但是会破坏程序的独立性。</p>
+<p>具体采用哪种替代方式取决于具体的情况，建议采取第二种处理方式，因为这样会大大提高程序的运行效率，至于程序的独立性，看你怎么去封装这个类了。</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/05/android广播使用/" itemprop="url">
+                  android广播的使用
                 </a>
               
             
@@ -961,8 +972,8 @@ Shoe getSheo(<span class="keyword">String</span> <span class="built_in">color</s
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/05/intent传递数据量问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/05/intent传递数据量问题/" itemprop="commentsCount"></span>
+                <a href="/2015/12/05/android广播使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/05/android广播使用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -987,14 +998,20 @@ Shoe getSheo(<span class="keyword">String</span> <span class="built_in">color</s
           <span itemprop="articleBody">
             
               <hr>
-<h2 id="传输超过1M的数据量会crash">传输超过1M的数据量会crash</h2><p>在Activity或者组件之前传递信息时，一般采用intent绑定bundle的方式传值，但在使用过程中需要注意的是不要用bundle传递大容量数据：</p>
-<p>在做项目的过程中，需要将听写界面的听写结果信息传递到听写记录界面供显示用，但是由于传递的数据量过大导致程序ANR，甚至直接报异常（传递的信息里面有bitmap转换成的byte数组、每一个词组的拼音、词语、语音信息），经过分析发现是由于bundle不能传递大容量的数据信息，在stackoverflow里面查阅发现有同行遇到类似的问题：</p>
-<p>（1）“The size limit of Intent is still pretty low in Jelly Bean, which is somewhat lower than 1MB (around 90K), so you should always be cautious about your data length, even if your application targets only latest Android versions.”</p>
-<p>（2）“As per my experience (sometime ago), you are able to put up to 1MB of data in a Bundleencapsulated inside Intent. I think, this restriction was valid up till Froyo or GingerBread.”</p>
-<p>所以在通过bundle传递数据时只能传递较小的数据信息，对于在不同组件之间需要传递大容量数据的情况时，有几种替代方式可以解决不能用bundle传递这些数据的问题：</p>
-<h2 id="方法一：">方法一：</h2><p>将需要传递的数据写在临时文件或者数据库中，再跳转到另外一个组件的时候再去读取这些数据信息，这种处理方式会由于读写文件较为耗时导致程序运行效率较低；</p>
-<h2 id="方法二：">方法二：</h2><p>将需要传递的数据信息封装在一个静态的类中（注意当前组件和要跳转到的组件必须属于同一个进程，因为进程之间才能够共享数据），在当前组件中为类设置内容，然后再跳转到的组件中去取，这种处理方式效率很高，但是会破坏程序的独立性。</p>
-<p>具体采用哪种替代方式取决于具体的情况，建议采取第二种处理方式，因为这样会大大提高程序的运行效率，至于程序的独立性，看你怎么去封装这个类了。</p>
+<p>BroadcastReceiver也就是“广播接收者”的意思，顾名思义，它就是用来接收来自系统和应用中的广播。<br>在Android系统中，广播体现在方方面面，例如当开机完成后系统会产生一条广播，接收到这条广播就能实现开机启动服务的功能；当网络状态改变时系统会产生一条广播，接收到这条广播就能及时地做出提示和保存数据等操作；当电池电量改变时，系统会产生一条广播，接收到这条广播就能在电量低时告知用户及时保存进度，等等。<br>Android中的广播机制设计的非常出色，很多事情原本需要开发者亲自操作的，现在只需等待广播告知自己就可以了，大大减少了开发的工作量和开发周期。而作为应用开发者，就需要数练掌握Android系统提供的一个开发利器，那就是BroadcastReceiver。下面我们就对BroadcastReceiver逐一地分析和演练，了解和掌握它的各种功能和用法。</p>
+<p>.首先，我们来演示一下创建一个BroadcastReceiver，并让这个BroadcastReceiver能够根据我们的需要来运行。要创建自己的BroadcastReceiver对象，我们需要继承android.content.BroadcastReceiver，并实现其onReceive方法。下面我们就创建一个名为MyReceiver广播接收者：<br>package com.scott.receiver;  </p>
+<p>import android.content.BroadcastReceiver;<br>import android.content.Context;<br>import android.content.Intent;<br>import android.util.Log;  </p>
+<p>public class MyReceiver extends BroadcastReceiver {  </p>
+<pre><code><span class="keyword">private</span> static final <span class="built_in">String</span> <span class="built_in">TAG</span> = <span class="string">"MyReceiver"</span>;  
+
+@Override  
+<span class="keyword">public</span> <span class="literal">void</span> onReceive(Context context, Intent intent) {  
+    <span class="built_in">String</span> msg = intent<span class="built_in">.</span>getStringExtra(<span class="string">"msg"</span>);  
+    <span class="keyword">Log</span><span class="built_in">.</span>i(<span class="built_in">TAG</span>, msg);  
+}  
+</code></pre><p>}<br>.在onReceive方法内，我们可以获取随广播而来的Intent中的数据，这非常重要，就像无线电一样，包含很多有用的信息。<br>在创建完我们的BroadcastReceiver之后，还不能够使它进入工作状态，我们需要为它注册一个指定的广播地址。没有注册广播地址的BroadcastReceiver就像一个缺少选台按钮的收音机，虽然功能俱备，但也无法收到电台的信号。下面我们就来介绍一下如何为BroadcastReceiver注册广播地址。</p>
+<p>##静态注册<br>.静态注册是在AndroidManifest.xml文件中配置的，我们就来为MyReceiver注册一个广播地址：<br>[html] view plaincopy</p>
+<p><receiver android:name=".MyReceiver"><br>            <intent-filter><br>                <action android:name="android.intent.action.MY_BROADCAST"><br>                <category android:name="android.intent.category.DEFAULT"><br>            </category></action></intent-filter><br>        </receiver><br>配置了以上信息之后，只要是android.intent.action.MY_BROADCAST这个地址的广播，MyReceiver都能够接收的到。注意，这种方式的注册是常驻型的，也就是说当应用关闭后，如果有广播信息传来，MyReceiver也会被系统调用而自动运行。</p>
 
             
           </span>
@@ -1072,7 +1089,7 @@ Shoe getSheo(<span class="keyword">String</span> <span class="built_in">color</s
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

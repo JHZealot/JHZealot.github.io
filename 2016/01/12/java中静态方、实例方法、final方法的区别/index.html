@@ -59,7 +59,7 @@
 <meta property="og:site_name" content="jianghao's blog">
 <meta property="og:description" content="1.final方法：将方法声明为final那有两个原因第一就是说明你已经知道这个方法提供的功能已经满足你要求，不需要进行扩展，并且也不允许任何从此类继承的类来覆写这个方法，但是继承仍然可以继承这个方法，也就是说可以直接使用。
 第二就是允许编译器将所有对此方法的调用转化为inline调用的机制，它会使你在调用final方法时，直接将方法主体插入到调用处，而不是进行例行的方法调用，例如保存断点，压栈等">
-<meta property="og:updated_time" content="2016-01-12T12:33:00.000Z">
+<meta property="og:updated_time" content="2016-01-12T12:44:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java中静态方法、实例方法、final方法的区别">
 <meta name="twitter:description" content="1.final方法：将方法声明为final那有两个原因第一就是说明你已经知道这个方法提供的功能已经满足你要求，不需要进行扩展，并且也不允许任何从此类继承的类来覆写这个方法，但是继承仍然可以继承这个方法，也就是说可以直接使用。
@@ -266,7 +266,8 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="1-final方法：">1.final方法：</h3><p>将方法声明为final那有两个原因<br>第一就是说明你已经知道这个方法提供的功能已经满足你要求，不需要进行扩展，并且也不允许任何从此类继承的类来覆写这个方法，但是继承仍然可以继承这个方法，也就是说可以直接使用。</p>
+        <span itemprop="articleBody"><hr>
+<h3 id="1-final方法：">1.final方法：</h3><p>将方法声明为final那有两个原因<br>第一就是说明你已经知道这个方法提供的功能已经满足你要求，不需要进行扩展，并且也不允许任何从此类继承的类来覆写这个方法，但是继承仍然可以继承这个方法，也就是说可以直接使用。</p>
 <p>第二就是允许编译器将所有对此方法的调用转化为inline调用的机制，它会使你在调用final方法时，直接将方法主体插入到调用处，而不是进行例行的方法调用，例如保存断点，压栈等，这样可能会使你的程序效率有所提高，然而当你的方法主体非常庞大时，或你在多处调用此方法，那么你的调用主体代码便会迅速膨胀，可能反而会影响效率，所以你要慎用final进行方法定义。</p>
 <h3 id="2-静态方法和实例方法">2.静态方法和实例方法</h3><p>在外部调用静态方法时，可以使用”类名.方法名”的方式，也可以使用”对象名.方法名”的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。</p>
 <p>静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。</p>
@@ -298,8 +299,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/07/android-service断点续传/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2016/01/10/android-service断点续传/" rel="next" title="Android-Service断点续传">
+                <i class="fa fa-chevron-left"></i> Android-Service断点续传
               </a>
             
           </div>
@@ -390,7 +391,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
