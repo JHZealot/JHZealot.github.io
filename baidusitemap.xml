@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/01/10/android-service%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/</loc>
+    <lastmod>2016-01-12T12:51:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android-Service断点续传</title>
+        <pubTime>2016-01-10T01:19:23.000Z</pubTime>
+        
+        <tag>service</tag>
+         
+        <tag>文件下载，SQlite</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://yoursite.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2015/12/07/intent%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE%E9%87%8F%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2016-01-12T12:47:20.000Z</lastmod>
     <data>
@@ -39,28 +61,6 @@
            
              
               <breadCrumb title="android" url="http://yoursite.com/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/01/10/android-service%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/</loc>
-    <lastmod>2016-01-12T12:45:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android-Service断点续传</title>
-        <pubTime>2016-01-10T01:19:23.000Z</pubTime>
-        
-        <tag>service</tag>
-         
-        <tag>文件下载，SQlite</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://yoursite.com/categories/Android/"/>
           
         </display>
     </data>
