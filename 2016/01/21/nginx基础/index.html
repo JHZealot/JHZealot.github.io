@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="buffer," />
+  <meta name="keywords" content="Nginx," />
 
 
 
@@ -51,16 +51,19 @@
 
 
 
-<meta name="description" content="对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：limit：所有对Buffer读写操作都会以limit变量的值作为上限。position：代表对缓冲区进行读写时，当前游标的位置。capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。flip、rewind、cle">
+<meta name="description" content="如果想要在Nginx服务器中使用JSP技术，需要Nginx下搭建jsp开发环境
+Nginx默认是127.0.0.1 80端口tomcat默认是127.0.0.1 8080 端口tomcat能解析后缀是.JSP的文件，浏览器内访问服务器，会首先访问nginx服务器，nginx的配置文件里设置.JSP文件转发至tomcat服务器解析创建文件 touch b.jsp打开文件 vi b.jsp编辑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java中 byteByffer中的clear、flip、rewind">
-<meta property="og:url" content="http://yoursite.com/2015/12/22/java中-byteByffer中的clear、flip、rewind/index.html">
+<meta property="og:title" content="nginx基础">
+<meta property="og:url" content="http://yoursite.com/2016/01/21/nginx基础/index.html">
 <meta property="og:site_name" content="jianghao's blog">
-<meta property="og:description" content="对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：limit：所有对Buffer读写操作都会以limit变量的值作为上限。position：代表对缓冲区进行读写时，当前游标的位置。capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。flip、rewind、cle">
-<meta property="og:updated_time" content="2016-01-06T01:44:56.000Z">
+<meta property="og:description" content="如果想要在Nginx服务器中使用JSP技术，需要Nginx下搭建jsp开发环境
+Nginx默认是127.0.0.1 80端口tomcat默认是127.0.0.1 8080 端口tomcat能解析后缀是.JSP的文件，浏览器内访问服务器，会首先访问nginx服务器，nginx的配置文件里设置.JSP文件转发至tomcat服务器解析创建文件 touch b.jsp打开文件 vi b.jsp编辑">
+<meta property="og:updated_time" content="2016-01-21T07:30:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java中 byteByffer中的clear、flip、rewind">
-<meta name="twitter:description" content="对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：limit：所有对Buffer读写操作都会以limit变量的值作为上限。position：代表对缓冲区进行读写时，当前游标的位置。capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。flip、rewind、cle">
+<meta name="twitter:title" content="nginx基础">
+<meta name="twitter:description" content="如果想要在Nginx服务器中使用JSP技术，需要Nginx下搭建jsp开发环境
+Nginx默认是127.0.0.1 80端口tomcat默认是127.0.0.1 8080 端口tomcat能解析后缀是.JSP的文件，浏览器内访问服务器，会首先访问nginx服务器，nginx的配置文件里设置.JSP文件转发至tomcat服务器解析创建文件 touch b.jsp打开文件 vi b.jsp编辑">
 
 
 
@@ -72,7 +75,7 @@
   };
 </script>
 
-  <title> java中 byteByffer中的clear、flip、rewind | jianghao's blog </title>
+  <title> nginx基础 | jianghao's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -202,7 +205,7 @@
             
             
               
-                java中 byteByffer中的clear、flip、rewind
+                nginx基础
               
             
           </h1>
@@ -211,8 +214,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-22T15:17:46+08:00" content="2015-12-22">
-              2015-12-22
+            <time itemprop="dateCreated" datetime="2016-01-21T15:28:17+08:00" content="2016-01-21">
+              2016-01-21
             </time>
           </span>
 
@@ -221,8 +224,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
+                  <a href="/categories/后端，服务器/" itemprop="url" rel="index">
+                    <span itemprop="name">后端，服务器</span>
                   </a>
                 </span>
 
@@ -237,8 +240,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/22/java中-byteByffer中的clear、flip、rewind/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/22/java中-byteByffer中的clear、flip、rewind/" itemprop="commentsCount"></span>
+                <a href="/2016/01/21/nginx基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/21/nginx基础/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -264,10 +267,31 @@
 
       
         <span itemprop="articleBody"><hr>
-<h3 id="对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：">对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：</h3><h2 id="limit：所有对Buffer读写操作都会以limit变量的值作为上限。">limit：所有对Buffer读写操作都会以limit变量的值作为上限。</h2><h2 id="position：代表对缓冲区进行读写时，当前游标的位置。">position：代表对缓冲区进行读写时，当前游标的位置。</h2><h2 id="capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。">capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。</h2><h3 id="flip、rewind、clear这三个方法便是用来设置这些值的。">flip、rewind、clear这三个方法便是用来设置这些值的。</h3><h2 id="clear方法">clear方法</h2><p>public final Buffer clear()<br>{<br>    position = 0; //重置当前读写位置<br>    limit = capacity;<br>    mark = -1;  //取消标记<br>    return this;<br>}<br>clear方法将缓冲区清空，一般是在重新写缓冲区时调用。</p>
-<h2 id="flip方法">flip方法</h2><p>public final Buffer flip() {<br> limit = position;<br> position = 0;<br> mark = -1;<br> return this;<br>}<br>反转缓冲区。首先将限制设置为当前位置，然后将位置设置为 0。如果已定义了标记，则丢弃该标记。 常与compact方法一起使用。通常情况下，在准备从缓冲区中读取数据时调用flip方法。</p>
-<h2 id="rewind方法">rewind方法</h2><p>public final Buffer rewind() {<br> position = 0;<br> mark = -1;<br>return this;<br>}</p>
-<h2 id="以上三种方法均使用final修饰，java-nio-Buffer的所有子类均使用同一种flip、clear和rewind机制。">以上三种方法均使用final修饰，java.nio.Buffer的所有子类均使用同一种flip、clear和rewind机制。</h2></span>
+<p>如果想要在Nginx服务器中使用JSP技术，需要Nginx下搭建jsp开发环境</p>
+<p>Nginx默认是127.0.0.1 80端口<br>tomcat默认是127.0.0.1 8080 端口<br>tomcat能解析后缀是.JSP的文件，浏览器内访问服务器，会首先访问nginx服务器，nginx的配置文件里设置.JSP文件转发至tomcat服务器解析<br>创建文件 touch b.jsp<br>打开文件 vi b.jsp<br>编辑    i<br>退出保存 ：wq!<br>移动文件 mv /data/www/ /home/root<br>复制文件 cp </p>
+<p>正向代理：电脑a访问c网站，访问不了，服务器b能访问c，我们访问b来访问c，b就叫做代理服务器，只是正向代理；</p>
+<p>反向代理：访问服务器a，a没有内容，a区访问其他服务器集群获得数据然后返回给用户，用户并不清楚数据的来源，这是反向代理。</p>
+<p>负载均衡：建立服务器集群，然后先访问中间服务器，中间服务器分配压力小的服务器让我们访问</p>
+<p>nginx rewrite功能不够强大，模块不够丰富，但是 并发高，内存占用小</p>
+<p>servlet是jsp的基础，JSP：java server page是动态网页的规范</p>
+<pre><code>upstream mypro{
+            ip_hash;
+            <span class="comment">//同一用户访问的永远是第一次负载均衡的服务器</span>
+            不同服务器的ip
+            server <span class="number">182.18</span><span class="number">.79</span><span class="number">.243</span> weight=<span class="number">2</span>;
+            server <span class="number">140.205</span><span class="number">.140</span><span class="number">.234</span> weight=<span class="number">1</span>;
+             }
+     server{
+             listen <span class="number">8080</span>;
+     location /{
+                 proxy_pass http:<span class="comment">//mypro</span>
+                 }
+
+     }
+</code></pre><p> HTTP upstream模块：默认是轮询的访问方式<br> ip-hash </p>
+<p> 关闭nginx 服务器：killall -9 </p>
+<p> 负载均衡的实现方式分为软件实现和硬件实现 中间代理机构是软件或者硬件</p>
+</span>
       
     </div>
 
@@ -275,7 +299,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/buffer/" rel="tag">#buffer</a>
+            <a href="/tags/Nginx/" rel="tag">#Nginx</a>
           
         </div>
       
@@ -284,17 +308,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/14/链表和数组的区别/" rel="next" title="链表和数组">
-                <i class="fa fa-chevron-left"></i> 链表和数组
+              <a href="/2016/01/12/java中静态方、实例方法、final方法的区别/" rel="next" title="java中静态方法、实例方法、final方法的区别">
+                <i class="fa fa-chevron-left"></i> java中静态方法、实例方法、final方法的区别
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/06/java享元模式/" rel="prev" title="java享元模式（Flyweight）">
-                java享元模式（Flyweight） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -321,8 +341,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/22/java中-byteByffer中的clear、flip、rewind/"
-           data-title="java中 byteByffer中的clear、flip、rewind" data-url="http://yoursite.com/2015/12/22/java中-byteByffer中的clear、flip、rewind/">
+      <div class="ds-thread" data-thread-key="2016/01/21/nginx基础/"
+           data-title="nginx基础" data-url="http://yoursite.com/2016/01/21/nginx基础/">
       </div>
     
   </div>
@@ -412,7 +432,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用："><span class="nav-number">1.</span> <span class="nav-text">对缓冲区的读写操作首先要知道缓冲区的下限、上限和当前位置。下面这些变量的值对Buffer类中的某些操作有着至关重要的作用：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#limit：所有对Buffer读写操作都会以limit变量的值作为上限。"><span class="nav-number"></span> <span class="nav-text">limit：所有对Buffer读写操作都会以limit变量的值作为上限。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position：代表对缓冲区进行读写时，当前游标的位置。"><span class="nav-number"></span> <span class="nav-text">position：代表对缓冲区进行读写时，当前游标的位置。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。"><span class="nav-number"></span> <span class="nav-text">capacity：代表缓冲区的最大容量（一般新建一个缓冲区的时候，limit的值和capacity的值默认是相等的）。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flip、rewind、clear这三个方法便是用来设置这些值的。"><span class="nav-number">1.</span> <span class="nav-text">flip、rewind、clear这三个方法便是用来设置这些值的。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clear方法"><span class="nav-number"></span> <span class="nav-text">clear方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flip方法"><span class="nav-number"></span> <span class="nav-text">flip方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rewind方法"><span class="nav-number"></span> <span class="nav-text">rewind方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以上三种方法均使用final修饰，java-nio-Buffer的所有子类均使用同一种flip、clear和rewind机制。"><span class="nav-number"></span> <span class="nav-text">以上三种方法均使用final修饰，java.nio.Buffer的所有子类均使用同一种flip、clear和rewind机制。</span></a></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

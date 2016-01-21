@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/01/21/nginx%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2016-01-21T07:30:02.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/01/10/android-service%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/</loc>
     <lastmod>2016-01-12T12:51:39.000Z</lastmod>
   </url>

@@ -210,6 +210,135 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/21/nginx基础/" itemprop="url">
+                  nginx基础
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-21T15:28:17+08:00" content="2016-01-21">
+              2016-01-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/后端，服务器/" itemprop="url" rel="index">
+                    <span itemprop="name">后端，服务器</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/21/nginx基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/21/nginx基础/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <hr>
+<p>如果想要在Nginx服务器中使用JSP技术，需要Nginx下搭建jsp开发环境</p>
+<p>Nginx默认是127.0.0.1 80端口<br>tomcat默认是127.0.0.1 8080 端口<br>tomcat能解析后缀是.JSP的文件，浏览器内访问服务器，会首先访问nginx服务器，nginx的配置文件里设置.JSP文件转发至tomcat服务器解析<br>创建文件 touch b.jsp<br>打开文件 vi b.jsp<br>编辑    i<br>退出保存 ：wq!<br>移动文件 mv /data/www/ /home/root<br>复制文件 cp </p>
+<p>正向代理：电脑a访问c网站，访问不了，服务器b能访问c，我们访问b来访问c，b就叫做代理服务器，只是正向代理；</p>
+<p>反向代理：访问服务器a，a没有内容，a区访问其他服务器集群获得数据然后返回给用户，用户并不清楚数据的来源，这是反向代理。</p>
+<p>负载均衡：建立服务器集群，然后先访问中间服务器，中间服务器分配压力小的服务器让我们访问</p>
+<p>nginx rewrite功能不够强大，模块不够丰富，但是 并发高，内存占用小</p>
+<p>servlet是jsp的基础，JSP：java server page是动态网页的规范</p>
+<pre><code>upstream mypro{
+            ip_hash;
+            <span class="comment">//同一用户访问的永远是第一次负载均衡的服务器</span>
+            不同服务器的ip
+            server <span class="number">182.18</span><span class="number">.79</span><span class="number">.243</span> weight=<span class="number">2</span>;
+            server <span class="number">140.205</span><span class="number">.140</span><span class="number">.234</span> weight=<span class="number">1</span>;
+             }
+     server{
+             listen <span class="number">8080</span>;
+     location /{
+                 proxy_pass http:<span class="comment">//mypro</span>
+                 }
+
+     }
+</code></pre><p> HTTP upstream模块：默认是轮询的访问方式<br> ip-hash </p>
+<p> 关闭nginx 服务器：killall -9 </p>
+<p> 负载均衡的实现方式分为软件实现和硬件实现 中间代理机构是软件或者硬件</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/12/java中静态方、实例方法、final方法的区别/" itemprop="url">
                   java中静态方法、实例方法、final方法的区别
                 </a>
@@ -1075,21 +1204,21 @@ Shoe getSheo(<span class="keyword">String</span> <span class="built_in">color</s
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
